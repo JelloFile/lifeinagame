@@ -402,13 +402,14 @@ function mathCommand(){
 function mathCommandCheck(){
   id++
   if(mathcommandanswer == mathcommandplayeranswer){
-    
+    id++
      cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'><tr><td><h2>You are...</h2><p>correct! You win <bold>$${mathprizemoney}!</bold> Since you won, there's no cooldown, so you can do /math again!</p></td></tr></table><br><br><br>`
     money.USDollarPocket = money.USDollarPocket + mathprizemoney
     mathcommandinprogress = 0
     scrollView()
     opacityChange(id)
   }else{
+    id++
     cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'><tr><td><h2>You are...</h2><p>wrong! The correct answer was ${mathcommandanswer}... Now you have a 15 second cooldown. </p></td></tr></table><br><br><br>`
 
     
