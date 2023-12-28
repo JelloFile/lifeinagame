@@ -400,7 +400,9 @@ function mathCommand(){
 }
 
 function mathCommandCheck(){
+  id++
   if(mathcommandanswer == mathcommandplayeranswer){
+    
      cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'><tr><td><h2>You are...</h2><p>correct! You win <bold>$${mathprizemoney}!</bold> Since you won, there's no cooldown, so you can do /math again!</p></td></tr></table><br><br><br>`
     money.USDollarPocket = money.USDollarPocket + mathprizemoney
     mathcommandinprogress = 0
