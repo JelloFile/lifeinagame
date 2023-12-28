@@ -558,7 +558,7 @@ if(inv.usedFishingRod >= 1){
     if(randomfish==3){
       cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
       <tr>
-        <td style='width:130px;'><h2>You fished</h2></td>      <td style='width:40px;'><h2>up</h2></td>      <td><h2>somethin!</h2></td></tr>
+        <td style='width:170px;'><h2>You fished</h2></td>      <td style='width:40px;'><h2>up</h2></td>      <td><h2>somethin!</h2></td></tr>
 
          <tr>
           <td style='width:130px;'>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/green-lime-fish.png"</td><td>GreenLime Fish!</td>
