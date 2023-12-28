@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+body,input,button{
+  color:white;
+  font-family:"Montserrat", sans-serif
+}
+
+
+.gameresponse{
+  background:#1e2124;
+  width:500px;
+  color:white;
+  height:30px;
+  text-align:left;
+  padding:10px;
+  margin:10px;
+  border-radius:10px;
+  
+
+}
+
+bold{
+  font-weight:800;
+}
+.userresponse{
+  background:#1e2124;
+  width:500px;
+  color:white;
+  height:30px;
+  text-align:left;
+  padding:10px;
+  margin:10px;
+  border-radius:10px;
+  position:absolute;
+  right:0;
+
+
+}
+.randomresponse{
+  background:#1e2124;
+  width:1000px;
+  color:white;
+  height:30px;
+  text-align:left;
+  padding:10px;
+  margin:10px;
+  border-radius:10px;
+margin-right:auto;
+  margin-left:auto;
+}
+#userinput{
+color:white;
+  background:#1e2124;
+  height:50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  outline:none;
+}
+
+/* Responses */
+
+i.caption{
+  font-size:10px;
+  font-weight:800;
+}
+
+button{
+  background:#2C2F33;
+  border-radius:10px;
+}
