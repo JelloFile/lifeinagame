@@ -536,7 +536,7 @@ if(inv.usedFishingRod >= 1){
     <tr>
       <td style='width:130px;'><h2>You fished</h2></td>      <td style='width:40px;'><h2>up</h2></td>      <td><h2>somethin!</h2></td></tr>
        <tr>
-        <td>You fished up a</td><td><img src="/sprites/items/fishes/red-fish.png"</td><td>Red Fish!</td>
+        <td>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishes/red-fish.png"</td><td>Red Fish!</td>
       </tr>
       </table><br><br><br>`
       inv.redFish++
@@ -547,7 +547,7 @@ if(inv.usedFishingRod >= 1){
       <td style='width:130px;'><h2>You fished</h2></td>      <td style='width:40px;'><h2>up</h2></td>      <td><h2>somethin!</h2></td></tr>
 
        <tr>
-        <td style='width:130px;'>You fished up a</td><td><img src="/sprites/items/fishes/blue-fish.png"</td><td>Blue Fish!</td>
+        <td style='width:130px;'>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishes/blue-fish.png"</td><td>Blue Fish!</td>
       </tr>
       </table><br><br><br>`
       inv.blueFish++
@@ -558,7 +558,7 @@ if(inv.usedFishingRod >= 1){
         <td style='width:130px;'><h2>You fished</h2></td>      <td style='width:40px;'><h2>up</h2></td>      <td><h2>somethin!</h2></td></tr>
 
          <tr>
-          <td style='width:130px;'>You fished up a</td><td><img src="/sprites/items/fishes/green-lime-fish.png"</td><td>GreenLime Fish!</td>
+          <td style='width:130px;'>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/green-lime-fish.png"</td><td>GreenLime Fish!</td>
         </tr>
         </table><br><br><br>`
       inv.greenLimeFish++
@@ -754,7 +754,7 @@ function shopCommand(){
         <td><h2>Shop</h2>
       </tr>  
       <tr>
-        <td style='margin:0;padding:0;'><img style='margin:0;padding:0;' src="/sprites/items/used-fishing-rod.png"/></td>  <td style='margin:0;padding:0;'>Used Fishing Rod - $500</td></tr>
+        <td style='margin:0;padding:0;'><img style='margin:0;padding:0;' src="https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/used-fishing-rod.png"/></td>  <td style='margin:0;padding:0;'>Used Fishing Rod - $500</td></tr>
 <tr>
   <td><i class='caption'>to buy these overpriced items, do /shop buy [item]. :)</i></td></tr>
 
@@ -811,7 +811,7 @@ function shopbuyUFRCommand(){
         <th style='width:238.72px;'><h2>Confirm Purchase?</h2></th>
       </tr>  
       <tr>
-        <td style='width:300px;'>Would you like to buy</td> <td style='margin:0;padding:0;'><img style='margin:0;padding:0;' src="/sprites/items/used-fishing-rod.png"/></td>  <td style='margin:0;padding:0;width:800px;'>Used Fishing Rod for $500?</td></tr>
+        <td style='width:300px;'>Would you like to buy</td> <td style='margin:0;padding:0;'><img style='margin:0;padding:0;' src="https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/used-fishing-rod.png"/></td>  <td style='margin:0;padding:0;width:800px;'>Used Fishing Rod for $500?</td></tr>
 <tr>
   <td><button onclick='changeUFRvar()'>Continue</button></td></tr>
 
@@ -912,19 +912,19 @@ if (itemstotal == 0){
   invphrases = "<tr><td>You have no items in your inventory...</td></tr>"
 }else{
   if (inv.usedFishingRod > 0){
-    invphrases = invphrases + `<tr><td><h3>Items Related to Fishing</h3></td><tr><td style='margin:0;padding:0;'><img src='/sprites/items/used-fishing-rod.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Used Fishing Rod:</td><td>${inv.usedFishingRod}</td></tr>`
+    invphrases = invphrases + `<tr><td><h3>Items Related to Fishing</h3></td><tr><td style='margin:0;padding:0;'><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/used-fishing-rod.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Used Fishing Rod:</td><td>${inv.usedFishingRod}</td></tr>`
     numberInv++
   }
   if (inv.redFish > 0){
-    invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='/sprites/items/fishes/red-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Red Fish:</td><td>${inv.redFish}</td></tr>`
+    invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/red-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Red Fish:</td><td>${inv.redFish}</td></tr>`
     numberInv++
   }
   if (inv.blueFish > 0){
-    invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='/sprites/items/fishes/blue-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Blue Fish:</td><td>${inv.blueFish}</td></tr>`
+    invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/blue-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Blue Fish:</td><td>${inv.blueFish}</td></tr>`
     numberInv++
   }
   if (inv.greenLimeFish > 0){
-    invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='/sprites/items/fishes/green-lime-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Green Lime Fish:</td><td>${inv.greenLimeFish}</td></tr>`
+    invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/green-lime-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Green Lime Fish:</td><td>${inv.greenLimeFish}</td></tr>`
     numberInv++
   }
 }
@@ -968,84 +968,3 @@ function noCommand(){id++
 }
 
 
-
-//to disable console (hopefully)
-
-/*var firstTime;
-firstTime = localStorage.getItem("firstTime");
-var widthOfPage = window.innerWidth;
-var heightOfPage = window.innerHeight;
-var widthOfActualPage = 0;
-widthOfActualPage = localStorage.getItem("lengthOfActual");
-var heightOfActualPage = 0;
-heightOfActualPage = localStorage.getItem("heightOfActual");
-if(localStorage.getItem("firstTime") == null){
-  localStorage.setItem("firstTime", 1) 
-  localStorage.setItem("lengthOfActual",window.innerWidth);
-  localStorage.setItem("heightOfActual", window.innerHeight);
-  checkforDisable()
-}else{
-  checkforDisable()
-}
-
-function checkforDisable(){
-   widthOfPage = window.innerWidth;
-heightOfPage = window.innerHeight;
-  if(widthOfActualPage > widthOfPage||heightOfActualPage >heightOfPage+200||heightOfActualPage > heightOfPage){
-location.href="/console"
-    }else{
-  setTimeout(checkforDisable, 50)
-  }
-}
-
-let keys = {
-      ctrl: false,
-      shift: false,
-  i:false,
-  j:false
-    };
-
-    document.addEventListener("keydown", (event) => {
-      console.log(event.key)
-      if (event.key === "Control") {
-        keys.ctrl = true;
-      }
-      if (event.key === "Shift") {
-        keys.shift = true;
-      }
-      if (event.key === "I"|| event.key == "i"){
-        keys.i = true;
-      }  if (event.key === "J"|| event.key == "j"){
-        keys.j = true;
-      }
-          if(keys.ctrl && keys.shift && keys.i){
-
-    close()
-    }else if( keys.ctrl && keys.shift && keys.j){
-           close()
-    }
-
-    });
-
-
-window.oncontextmenu = function ()
-{
-
-    return false;    
-}
-
-    addEventListener("keyup", (event) => {
-      if (event.key === "Control") {
-        keys.ctrl = false;
-      }
-      if (event.key === "Shift") {
-        keys.shift = false;
-      }
-       if (event.key === "I" || event.key == "i")  {
-        keys.i = false;
-      }
-         if (event.key === "J" || event.key == "j")  {
-        keys.j = false;
-      }
-
-    });*/
