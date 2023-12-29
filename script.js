@@ -510,7 +510,7 @@ function creditCommand(){
   id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
     <tr>
-      <td><h2>Credits</h2><p><a href='https://replit.com/@JelloFile' style='color:skyblue'>@JelloFile</a> - Dev & Creator & PixelArtist </p><p><a href='https://replit.com/@SumeetEaga' style='color:skyblue'>@SumeetEaga</a> - Dev </p><br><br><i class='caption'>Wanna be on the credits? Send some items that YOU want added to @JelloFile's discord, or to his email!</i></td>
+      <td><h2>Credits</h2><p><a href='https://replit.com/@JelloFile' style='color:skyblue'>@JelloFile</a> - Dev & Creator & PixelArtist </p><p><a style='color:skyblue'>@ElectroGOD</a> - Pixel Artist </p><br><br><i class='caption'>Wanna be on the credits? Send some items that YOU want added to @JelloFile's discord, or to his email!</i></td>
     </tr></table><br><br>`
   scrollView()
   opacityChange(id)
@@ -638,7 +638,7 @@ var phraseNumber = Math.floor(Math.random()*10)+1
     }else if(personNumber == 5){
        person = "The CEO of Discord"
     }else if(personNumber == 6){
-       person = "@cubinginsider on Youtube"
+       person = "@JelloFile on Youtube"
     }else if(personNumber == 7){
        person = "God Of Codes"
     }else if(personNumber == 8){
