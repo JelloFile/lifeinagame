@@ -127,7 +127,9 @@ setTimeout(sellredFishCommand, 1000)
 setTimeout(sellblueFishCommand, 1000)
 }else if( command == "/sell Green Lime Fish" || command == "/sell green lime fish"){
 setTimeout(sellgreenlimeFishCommand, 1000)
-}else{
+}else if(command == "/item"){
+ setTimeout(itemCommand,1000) 
+}{
   setTimeout(noCommand,1000)
 
 }
@@ -949,14 +951,30 @@ ${invphrases}
   opacityChange(id)
   scrollView()
 }
+//item command
+function itemCommand(){
+  id++
+  cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
+    <tr>
+      <td><h2>Item Command Usage</h2><p>Find information about an item. (/item [item])<p></td>
+    </tr>  
 
+
+
+  </table><br><br><br>
+
+  `
+  currentthing=0
+                      document.getElementById(id).style = `opacity:0`
+  opacityChange(id)
+  scrollView()}
 
 
 //Command No Exist
 function noCommand(){id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
     <tr>
-      <td><h2>That... isn't a valid command</h2><p>Do /help if you're confused!<p></td>
+      <td><h2>That... isn't a valid command</h2><p>Do /help if you're confused!</p></td>
     </tr>  
 
 
