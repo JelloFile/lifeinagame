@@ -129,7 +129,7 @@ setTimeout(sellblueFishCommand, 1000)
 setTimeout(sellgreenlimeFishCommand, 1000)
 }else if(command == "/item"){
  setTimeout(itemCommand,1000) 
-}{
+}else{
   setTimeout(noCommand,1000)
 
 }
