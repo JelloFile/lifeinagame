@@ -6,15 +6,18 @@ if(localStorage.getItem("USDollarPocket") == null){
   //if its null, the user never played before/reset all.
   localStorage.setItem("USDollarPocket", 0)
   localStorage.setItem("USDollarBank", 0)
+    localStorage.setItem("invRainbowFish", 0)
   localStorage.setItem("invRedFish", 0)
   localStorage.setItem("invBlueFish", 0)
   localStorage.setItem("invGreenLimeFish", 0)
+   localStorage.setItem("invUsedFishingRod", 0)
 }
 var inv = {
   usedFishingRod: Number(localStorage.getItem("invUsedFishingRod")),
   redFish:Number(localStorage.getItem("invRedFish")),
   blueFish:Number(localStorage.getItem("invBlueFish")),
   greenLimeFish:Number(localStorage.getItem("invGreenLimeFish")),
+  rainbowFish:Number(localStorage.getItem("invRainbowFish")),
 }
 var money = {
   USDollarPocket: Number(localStorage.getItem("USDollarPocket")),
@@ -32,7 +35,8 @@ function save(){
   localStorage.setItem("invRedFish", inv.redFish)
   localStorage.setItem("invBlueFish", inv.blueFish)
   localStorage.setItem("invGreenLimeFish", inv.greenLimeFish)
-  itemstotal = inv.usedFishingRod + inv.redFish + inv.blueFish + inv.greenLimeFish
+    localStorage.setItem("invRainbowFish", inv.rainbowFish)
+  itemstotal = inv.usedFishingRod + inv.redFish + inv.blueFish + inv.greenLimeFish + inv.rainbowFish
   setTimeout(save,1000)
 }
 document.addEventListener('keypress', function(event) {
@@ -173,7 +177,39 @@ function sellCommand(){
  document.getElementById(id).style = `opacity:0`
   opacityChange(id)
 }
+function sellrainbowFishCommand(){
+  if(inv.rainbowFish <= 0){
+    cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
+      <tr>
+        <td><h2>Scammer get scammed</h2><br><h4 style='margin:0;padding:0;'>You don't have the item. :)</h4></td>
+      </tr>  
 
+
+
+    </table><br><br><br>`
+    scrollView()
+      currentthing=0
+     document.getElementById(id).style = `opacity:0`
+      opacityChange(id)
+    
+  }else{
+  id++
+  cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
+    <tr>
+      <td><h2>Alright</h2><br><h4 style='margin:0;padding:0;'>You sold a Rainbow Fish for $3000</h4></td>
+    </tr>  
+
+
+
+  </table><br><br><br>`
+    inv.rainbowFish = inv.rainbowFish - 1
+    money.USDollarPocket = money.USDollarPocket + 3000
+  scrollView()
+  currentthing=0
+ document.getElementById(id).style = `opacity:0`
+  opacityChange(id)
+  }
+}
 function sellredFishCommand(){
   if(inv.redFish <= 0){
     cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
@@ -526,6 +562,17 @@ function fishCommand(){
   if (fishcooldowntimer == 0){
 if(inv.usedFishingRod >= 1){
   id++
+  var rainbowfishappear=Math.floor(Math.random*100)+1
+  if(rainbowfishappear == 58){
+        cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
+    <tr>
+      <td style='width:130px;'><h2>There's</h2></td>      <td style='width:40px;'><h2>no</h2></td>      <td><h2>way...</h2></td></tr>
+       <tr>
+        <td>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/rainbow-fish.png"</td><td>Rainbow Fish... YOU ARE SO LUCKY</td>
+      </tr>
+      </table><br><br><br>`
+      inv.rainbowFish++
+  }else{
   var fishresult = Math.floor(Math.random()*2)+1
  var randomfish = Math.floor(Math.random() * 3)+1;
   if(fishresult == 1){
@@ -541,7 +588,7 @@ if(inv.usedFishingRod >= 1){
     <tr>
       <td style='width:130px;'><h2>You fished</h2></td>      <td style='width:40px;'><h2>up</h2></td>      <td><h2>somethin!</h2></td></tr>
        <tr>
-        <td>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishes/red-fish.png"</td><td>Red Fish!</td>
+        <td>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/red-fish.png"</td><td>Red Fish!</td>
       </tr>
       </table><br><br><br>`
       inv.redFish++
@@ -552,7 +599,7 @@ if(inv.usedFishingRod >= 1){
       <td style='width:130px;'><h2>You fished</h2></td>      <td style='width:40px;'><h2>up</h2></td>      <td><h2>somethin!</h2></td></tr>
 
        <tr>
-        <td style='width:130px;'>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishes/blue-fish.png"</td><td>Blue Fish!</td>
+        <td style='width:130px;'>You fished up a</td><td><img src="https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/blue-fish.png"</td><td>Blue Fish!</td>
       </tr>
       </table><br><br><br>`
       inv.blueFish++
@@ -568,6 +615,7 @@ if(inv.usedFishingRod >= 1){
         </table><br><br><br>`
       inv.greenLimeFish++
     }
+  }
     scrollView()
     opacityChange(id)
     
