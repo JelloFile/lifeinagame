@@ -129,6 +129,8 @@ setTimeout(sellCommand, 1000)
 setTimeout(sellredFishCommand, 1000)
 }else if( command == "/sell Blue Fish" || command == "/sell blue fish"){
 setTimeout(sellblueFishCommand, 1000)
+}else if( command == "/sell Rainbow Fish" || command == "/sell rainbow fish"){
+setTimeout(sellrainbowFishCommand, 1000)
 }else if( command == "/sell Green Lime Fish" || command == "/sell green lime fish"){
 setTimeout(sellgreenlimeFishCommand, 1000)
 }else if(command == "/item"){
