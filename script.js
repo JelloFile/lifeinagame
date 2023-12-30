@@ -980,6 +980,10 @@ if (itemstotal == 0){
     invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/green-lime-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Green Lime Fish:</td><td>${inv.greenLimeFish}</td></tr>`
     numberInv++
   }
+    if (inv.rainbowFish > 0){
+    invphrases = invphrases + `<tr><td style='margin:0;padding:0;'><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/rainbow-fish.png'style="width:40px;height:40px;"></td><td style='margin:0;padding:0;'>Rainbow Fish:</td><td>${inv.rainbowFish}</td></tr>`
+    numberInv++
+  }
 }
 
   
