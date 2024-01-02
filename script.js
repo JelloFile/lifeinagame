@@ -1023,6 +1023,7 @@ function itemCommand(){
   opacityChange(id)
   scrollView()
 }
+
 function itemUFRCommand(){
   id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse' style='border-left-color:white'>
