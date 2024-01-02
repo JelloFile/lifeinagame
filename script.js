@@ -1021,7 +1021,25 @@ function itemCommand(){
   currentthing=0
                       document.getElementById(id).style = `opacity:0`
   opacityChange(id)
-  scrollView()}
+  scrollView()
+}
+function itemUFRCommand(){
+  id++
+  cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse' style='border-left-color:white'>
+    <tr>
+      <td><h2>Used Fishing Rod</h2><p><i style='font-size:5px;'>Common Item</i><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/used-fishing-rod.png'/><br>A Fishing Rod that has been used for a 1000 years. Used to unlock /fish.</p></td>
+    </tr>  
+
+
+
+  </table><br><br><br>
+
+  `
+  currentthing=0
+                      document.getElementById(id).style = `opacity:0`
+  opacityChange(id)
+  scrollView()
+}
 
 
 //Command No Exist
