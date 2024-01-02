@@ -1010,7 +1010,7 @@ function itemCommand(){
   id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
     <tr>
-      <td><h2>Item Command Usage</h2><p>Find information about an item. (/item [item])<p></td>
+      <td><h2>Item Command Usage</h2><p>Find information about an item. (/item [item])</p></td>
     </tr>  
 
 
