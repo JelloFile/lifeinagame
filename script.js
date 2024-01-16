@@ -133,6 +133,8 @@ setTimeout(sellblueFishCommand, 1000)
 setTimeout(sellrainbowFishCommand, 1000)
 }else if( command == "/sell Green Lime Fish" || command == "/sell green lime fish"){
 setTimeout(sellgreenlimeFishCommand, 1000)
+}else if( command == "/dep" || command == "/deposit"){
+setTimeout(depCommand, 1000)
 }else if(command == "/item"){
  setTimeout(itemCommand,1000) 
 }else{
@@ -140,6 +142,20 @@ setTimeout(sellgreenlimeFishCommand, 1000)
 
 }
 
+}
+//deposit command 
+
+function depCommand(){
+  //in progress, edit when possible.
+ id++
+  cont.innerHTML = cont.innerHTML + `<table id='${id}f'class='gameresponse'>
+  <tr><td><h1>Deposit Command</h1><p>How much would you like to deposit into your bank account? If you run another command while this command is in progress, this command will nullify itself. To deposit your money, just type in the number of how much you would like to deposit in the input box. Do not do /dep [amount] as we have not implemented that yet. </p></td></tr>
+  </table><br><br><br>
+  `
+  scrollView()
+  currentthing=0
+                       document.getElementById(id).style = `opacity:0`
+  opacityChange(id+"f")
 }
 
   //help command
