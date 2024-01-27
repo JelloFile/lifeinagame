@@ -46,14 +46,14 @@ document.addEventListener('keypress', function(event) {
     if(mathcommandinprogress == 1){
       mathcommandplayeranswer = input.value
       setTimeout( mathCommandCheck,1000)
-     
+
     }else{
 findCommand(input.value)
     }
-  
-  
+
+
     input.value = ""
-    
+
   }
 });
 function playerResp(val){
@@ -66,7 +66,7 @@ function playerResp(val){
 
 
   </table><br><br><br><br><br><br><br><br><br><br><br>
-  
+
   `
   opacityChange(id)
   scrollView()
@@ -86,7 +86,7 @@ function opacityChange(i){
     document.getElementById(i).style = `opacity:${currentthing}`
     setTimeout(function(){opacityChange(i)},10)
   }
-  
+
 }
 
 //Commands
@@ -137,6 +137,14 @@ setTimeout(sellgreenlimeFishCommand, 1000)
 setTimeout(depCommand, 1000)
 }else if(command == "/item"){
  setTimeout(itemCommand,1000) 
+}else if(command == "/item used fishing rod"||command == "/item Used Fishing Rod"){
+ setTimeout(itemUFRCommand,1000) 
+}else if(command == "/item green lime fish"||command == "/item Green Lime Fish"){
+ setTimeout(itemgreenlimefishc,1000) 
+}else if(command == "/item blue fish"||command == "/item Blue Fish"){
+ setTimeout(itemblueFishCommand,1000) 
+}else if(command == "/item red fish"||command == "/item Red Fish"){
+ setTimeout(itemredFishCommand,1000) 
 }else{
   setTimeout(noCommand,1000)
 
@@ -209,7 +217,7 @@ function sellrainbowFishCommand(){
       currentthing=0
      document.getElementById(id).style = `opacity:0`
       opacityChange(id)
-    
+
   }else{
   id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
@@ -242,7 +250,7 @@ function sellredFishCommand(){
       currentthing=0
      document.getElementById(id).style = `opacity:0`
       opacityChange(id)
-    
+
   }else{
   id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
@@ -423,18 +431,18 @@ function mathCommand(){
 
 
       </table><br><br><br>
-    
+
       `
       scrollView()
       opacityChange(id)
-    
+
     }else{
       mathcommandinprogress=1
       var number1 = Math.floor(Math.random()*50)+1
       var number2= Math.floor(Math.random()*50)+1
       var symbolnumber = Math.floor(Math.random()*2)+1
       var symbol = ""
-     
+
       if(symbolnumber == 1){
         symbol = "+"
         mathprizemoney = Math.floor(Math.random()*10)+1
@@ -445,13 +453,13 @@ function mathCommand(){
       var equation = number1 + symbol + number2
        mathcommandanswer = eval(equation)
 
-      
+
       cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'><tr><td><h2>Math Command</h2><p>Your equation is: <bold>${equation}</bold> and just only type the number. No command.</p></td></tr></table><br><br><br>`
       scrollView()
       opacityChange(id)
     }
-  
-  
+
+
 
 }
 
@@ -468,13 +476,13 @@ function mathCommandCheck(){
     id++
     cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'><tr><td><h2>You are...</h2><p>wrong! The correct answer was ${mathcommandanswer}... Now you have a 15 second cooldown. </p></td></tr></table><br><br><br>`
 
-    
+
     mathcommandinprogress = 0
     mathCooldown = 15
     mathcommandcooldown()
     scrollView()
     opacityChange(id)
-    
+
   }
 
 }
@@ -517,7 +525,7 @@ function clearCommand(){
   id++
   cont.innerHTML = ``
   scrollView()
- 
+
 
 }
 
@@ -636,11 +644,11 @@ if(inv.usedFishingRod >= 1){
   }
     scrollView()
     opacityChange(id)
-    
+
   }
   fishcooldowntimer = 30
   fishcooldown()
-  
+
   }else{
   id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
@@ -667,7 +675,7 @@ if(inv.usedFishingRod >= 1){
 var fishcooldowntimer = 0
 function fishcooldown(){
   if(fishcooldowntimer == 0){
-    
+
   }else{
     fishcooldowntimer = fishcooldowntimer - 1
     setTimeout(fishcooldown, 1000)
@@ -757,25 +765,25 @@ var phraseNumber = Math.floor(Math.random()*10)+1
         money.USDollarPocket = money.USDollarPocket + moneygiven
       }else if(resultNumber == 2 & phraseNumber == 2){
              phrase = `I hope you understand that begging will never work, go get a job.`
-        
+
         }else if(resultNumber == 2 & phraseNumber == 3){
            phrase = `I'm poor too :D`
-     
+
       }else if(resultNumber == 2 & phraseNumber == 4){
            phrase = `lol, nah `
-     
+
       }else if(resultNumber == 2 & phraseNumber == 5){
            phrase = `hey dude, im out of money... `
 
       }else if(resultNumber == 2 & phraseNumber == 6){
            phrase = `I'm poor now because of the poor.`
-     
+
       }else if(resultNumber == 2 & phraseNumber == 7){
            phrase = `I AM IN CRIPPLING DEBT`
 
       }else if(resultNumber == 2 & phraseNumber == 8){
            phrase = `*runs away*`
-      
+
       }else if(resultNumber == 2 & phraseNumber == 9){
            phrase = `Why u begging for something you'll never get?`
 
@@ -801,7 +809,7 @@ scrollView()
 }
 function begcooldown(){
   if(begCooldown == 0){
-    
+
   }else{
     begCooldown = begCooldown - 1
     setTimeout(begcooldown, 1000)
@@ -902,7 +910,7 @@ function shopbuyUFRCommand(){
           <tr>
             <td>You don't have enough money to buy this item, so go find some more.</td></tr>
 
-    
+
         </table><br><br><br>
 
         `
@@ -927,18 +935,18 @@ function changeUFRvar(){
   document.getElementById(id).innerHTML = `<tr>
       <td><h2>Successfully Bought!</h2></td>
 <tr>`
-  
+
 }
 var il=""
 function buyUFRCheckForOthers(){
   if(id == il){
    setTimeout(buyUFRCheckForOthers, 50)
   }else if(UFRbought == 1){
-    
+
   }else{
     document.getElementById(il).style = `opacity:0`
       opacityChange(il)
-     
+
       document.getElementById(il).innerHTML = `<tr>
           <td><h2>Another command was run.</h2><p>Another command was run, so this action was cancelled.</p></td>
     <tr>`
@@ -978,7 +986,7 @@ function invCommand(){
 var invphrases = ""
   var numberInv = 0
 //change when needed.
-  
+
 if (itemstotal == 0){
   invphrases = "<tr><td>You have no items in your inventory...</td></tr>"
 }else{
@@ -1004,7 +1012,7 @@ if (itemstotal == 0){
   }
 }
 
-  
+
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse'>
     <tr>
       <td><h2>Your Inventory</h2>
@@ -1044,7 +1052,7 @@ function itemUFRCommand(){
   id++
   cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse' style='border-left-color:white'>
     <tr>
-      <td><h2>Used Fishing Rod</h2><p><i style='font-size:5px;'>Common Item</i><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/used-fishing-rod.png'/><br>A Fishing Rod that has been used for a 1000 years. Used to unlock /fish.</p></td>
+      <td><h2>Used Fishing Rod</h2><p><i style='font-size:20px;'>Common Item</i><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/used-fishing-rod.png' style='width:400px;height:400px;'/><br>A Fishing Rod that has been used for a 1000 years. Used to unlock /fish.</p><br><i style='font-size:10px;'>/buy used fishing rod for $500<br>Cannot Sell.<br>Actual Value: $32</i></td>
     </tr>  
 
 
@@ -1057,7 +1065,57 @@ function itemUFRCommand(){
   opacityChange(id)
   scrollView()
 }
+function itemredFishCommand(){
+  id++
+  cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse' style='border-left-color:white'>
+    <tr>
+      <td><h2>Red Fish</h2><p><i style='font-size:20px;'>Common Item</i><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/red-fish.png' style='width:400px;height:400px;'/><br>A red innocent fish, caught using /fish.</p><br><i style='font-size:10px;'>/sell red fish for 100<br>Sellable<br>Actual Value: $100 </i></td>
+    </tr>  
 
+
+
+  </table><br><br><br>
+
+  `
+  currentthing=0
+                      document.getElementById(id).style = `opacity:0`
+  opacityChange(id)
+  scrollView()
+}
+function itemblueFishCommand(){
+  id++
+  cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse' style='border-left-color:white'>
+    <tr>
+      <td><h2>Blue Fish</h2><p><i style='font-size:20px;'>Common Item</i><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/blue-fish.png' style='width:400px;height:400px;'/><br>A blue innocent fish, caught using /fish.</p><br><i style='font-size:10px;'>/sell blue fish for $100<br>Sellable<br>Actual Value: $100</i></td>
+    </tr>  
+
+
+
+  </table><br><br><br>
+
+  `
+  currentthing=0
+                      document.getElementById(id).style = `opacity:0`
+  opacityChange(id)
+  scrollView()
+}
+function itemgreenlimefishc(){
+  id++
+  cont.innerHTML = cont.innerHTML + `<table id='${id}'class='gameresponse' style='border-left-color:white'>
+    <tr>
+      <td><h2>Green Lime Fish</h2><p><i style='font-size:20px;'>Common Item</i><img src='https://jellofile.github.io/lifeinagame/sprites/items/fishingrelated/green-lime-fish.png' style='width:400px;height:400px;'/><br>A green, limish innocent fish, caught using /fish.</p><br><i style='font-size:10px;'>/sell green lime fish for $100<br>Sellable<br>Actual Value: $300</i></td>
+    </tr>  
+
+
+
+  </table><br><br><br>
+
+  `
+  currentthing=0
+                      document.getElementById(id).style = `opacity:0`
+  opacityChange(id)
+  scrollView()
+}
 
 //Command No Exist
 function noCommand(){id++
@@ -1076,5 +1134,4 @@ function noCommand(){id++
   opacityChange(id)
   scrollView()
 }
-
 
